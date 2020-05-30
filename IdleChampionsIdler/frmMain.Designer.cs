@@ -44,12 +44,16 @@
             this.lblCycleTime = new System.Windows.Forms.Label();
             this.nudCycleTime = new System.Windows.Forms.NumericUpDown();
             this.btnStop = new System.Windows.Forms.Button();
+            this.nudReAutoProgress = new System.Windows.Forms.NumericUpDown();
+            this.label1 = new System.Windows.Forms.Label();
+            this.chkAutoprogress = new System.Windows.Forms.CheckBox();
             ((System.ComponentModel.ISupportInitialize)(this.nudCycleTime)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.nudReAutoProgress)).BeginInit();
             this.SuspendLayout();
             // 
             // btnStart
             // 
-            this.btnStart.Location = new System.Drawing.Point(47, 211);
+            this.btnStart.Location = new System.Drawing.Point(47, 221);
             this.btnStart.Name = "btnStart";
             this.btnStart.Size = new System.Drawing.Size(146, 23);
             this.btnStart.TabIndex = 0;
@@ -180,7 +184,7 @@
             // lblCycleTime
             // 
             this.lblCycleTime.AutoSize = true;
-            this.lblCycleTime.Location = new System.Drawing.Point(202, 164);
+            this.lblCycleTime.Location = new System.Drawing.Point(22, 180);
             this.lblCycleTime.Name = "lblCycleTime";
             this.lblCycleTime.Size = new System.Drawing.Size(116, 13);
             this.lblCycleTime.TabIndex = 13;
@@ -188,7 +192,7 @@
             // 
             // nudCycleTime
             // 
-            this.nudCycleTime.Location = new System.Drawing.Point(325, 161);
+            this.nudCycleTime.Location = new System.Drawing.Point(145, 177);
             this.nudCycleTime.Minimum = new decimal(new int[] {
             1,
             0,
@@ -205,7 +209,7 @@
             // 
             // btnStop
             // 
-            this.btnStop.Location = new System.Drawing.Point(387, 211);
+            this.btnStop.Location = new System.Drawing.Point(387, 221);
             this.btnStop.Name = "btnStop";
             this.btnStop.Size = new System.Drawing.Size(142, 23);
             this.btnStop.TabIndex = 15;
@@ -213,11 +217,50 @@
             this.btnStop.UseVisualStyleBackColor = true;
             this.btnStop.Click += new System.EventHandler(this.btnStop_Click);
             // 
+            // nudReAutoProgress
+            // 
+            this.nudReAutoProgress.Location = new System.Drawing.Point(539, 178);
+            this.nudReAutoProgress.Minimum = new decimal(new int[] {
+            1,
+            0,
+            0,
+            0});
+            this.nudReAutoProgress.Name = "nudReAutoProgress";
+            this.nudReAutoProgress.Size = new System.Drawing.Size(64, 20);
+            this.nudReAutoProgress.TabIndex = 19;
+            this.nudReAutoProgress.Value = new decimal(new int[] {
+            5,
+            0,
+            0,
+            0});
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Location = new System.Drawing.Point(357, 180);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(176, 13);
+            this.label1.TabIndex = 18;
+            this.label1.Text = "Reactivate Autoprogress (Minutes) :";
+            // 
+            // chkAutoprogress
+            // 
+            this.chkAutoprogress.AutoSize = true;
+            this.chkAutoprogress.Location = new System.Drawing.Point(352, 153);
+            this.chkAutoprogress.Name = "chkAutoprogress";
+            this.chkAutoprogress.Size = new System.Drawing.Size(187, 17);
+            this.chkAutoprogress.TabIndex = 20;
+            this.chkAutoprogress.Text = "Reactivate Autoprogress If Stalled";
+            this.chkAutoprogress.UseVisualStyleBackColor = true;
+            // 
             // frmMain
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(660, 279);
+            this.Controls.Add(this.chkAutoprogress);
+            this.Controls.Add(this.nudReAutoProgress);
+            this.Controls.Add(this.label1);
             this.Controls.Add(this.btnStop);
             this.Controls.Add(this.nudCycleTime);
             this.Controls.Add(this.lblCycleTime);
@@ -237,6 +280,7 @@
             this.Name = "frmMain";
             this.Text = "Idle Clicker for Idle Champions";
             ((System.ComponentModel.ISupportInitialize)(this.nudCycleTime)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.nudReAutoProgress)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -260,6 +304,9 @@
         private System.Windows.Forms.Label lblCycleTime;
         private System.Windows.Forms.NumericUpDown nudCycleTime;
         private System.Windows.Forms.Button btnStop;
+        private System.Windows.Forms.NumericUpDown nudReAutoProgress;
+        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.CheckBox chkAutoprogress;
     }
 }
 

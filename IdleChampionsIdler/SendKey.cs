@@ -17,10 +17,16 @@ namespace IdleChampionsIdler
         public static IntPtr SetWindow()
         {
             IntPtr curWin = GetForegroundWindow();
-            IntPtr gameWin = FindWindow("UnityWndClass", "Idle Champions");
+            IntPtr gameWin = GetIdleChampsWindow();
             SetForegroundWindow(gameWin);
 
             return curWin;
+        }
+
+        public static IntPtr GetIdleChampsWindow()
+        {
+            IntPtr gameWin = FindWindow("UnityWndClass", "Idle Champions");
+            return gameWin;
         }
 
         public static void ReturnWindow(IntPtr returnWindow)
@@ -31,11 +37,11 @@ namespace IdleChampionsIdler
         public static void Send(string KeyToSend)
         {
             int sleepTime = 20;
-                      
+
             Thread.Sleep(sleepTime);
             SendKeys.SendWait(KeyToSend);
             Thread.Sleep(sleepTime);
-            
+
         }
     }
 }
